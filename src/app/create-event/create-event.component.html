@@ -1,0 +1,25 @@
+
+<div fxLayout='row' class="zero" fxLayoutAlign="center stretch">
+  
+  <div fxFlex="60" class="one">
+    <app-create-event-basic-info *ngIf="isBasicActive"></app-create-event-basic-info>
+    <app-create-event-additional-info *ngIf="isAdditionalActive"></app-create-event-additional-info>
+    <app-create-event-pictures *ngIf="isPicturesActive"></app-create-event-pictures>
+    
+    <div fxLayout='row' fxLayoutAlign='end'>
+      <button mat-raised-button color="primary" (click)="onClickPrevious()" *ngIf="isAdditionalActive||isPicturesActive">
+          <mat-icon aria-label="Example icon-button with a heart icon">person_add</mat-icon>
+          <label>Previous</label>
+      </button>
+      <button mat-raised-button color="primary" (click)="onClickNext()" *ngIf="isBasicActive||isAdditionalActive">
+          <mat-icon aria-label="Example icon-button with a heart icon">person_add</mat-icon>
+          <label>Next</label>
+      </button>
+    </div>
+  </div>
+  
+  <div fxFlex="20" class="two" fxHide fxShow.gt-md>
+    <app-create-event-sequence-tabs activeTabNumber="{{activeTabIndex}}"></app-create-event-sequence-tabs>
+  </div>
+    
+</div>

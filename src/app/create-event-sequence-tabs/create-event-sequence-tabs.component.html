@@ -1,0 +1,35 @@
+<mat-tab-group class="demo-tab-group" [(selectedIndex)]="activeTabNumber" >
+    <mat-tab label="Tab 1">
+        <ng-template mat-tab-label>
+         ⭐
+        </ng-template>
+      <div class="demo-tab-content" fxLayoutAlign="center center" fxLayout='column'>
+          <mat-icon class="infoIcon">info_outline</mat-icon>
+          <h2>Basic Information</h2>
+          <mat-icon class="infoIcon">more_horiz</mat-icon>
+          <h4>Fill out the form on the left.You can always edit the data you enter from the Settings menu later</h4>
+      </div>
+    </mat-tab>
+    <mat-tab label="Tab 2">
+      <ng-template mat-tab-label>
+        ⭐
+      </ng-template>
+      <div class="demo-tab-content" fxLayoutAlign="center center" fxLayout='column'>
+          <mat-icon class="infoIcon">info_outline</mat-icon>
+          <h2>Additional Information</h2>
+          <mat-icon class="infoIcon">more_horiz</mat-icon>
+          <h4>Fill out the form on the left.You can always edit the data you enter from the Settings menu later</h4>
+      </div>  
+    </mat-tab>
+    <mat-tab label="Tab 3">
+      <ng-template mat-tab-label>
+        ⭐
+      </ng-template>        
+      <div class="demo-tab-content" fxLayoutAlign="center center" fxLayout='column'>
+          <mat-icon class="infoIcon">photo_size_select_actual</mat-icon>
+          <h2>Add Pictures</h2>
+          <mat-icon class="infoIcon">more_horiz</mat-icon>
+          <h4>Add some relevant pictures to make your event page attractive</h4>
+      </div>
+    </mat-tab>
+  </mat-tab-group>

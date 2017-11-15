@@ -1,0 +1,58 @@
+<h2>Basic Information</h2>
+<div fxLayout="column">
+    <!--event title -->
+    <label>Event Title:</label>
+    <mat-form-field>
+        <input matInput placeholder="Title text for your event">
+    </mat-form-field>
+
+    <!-- organisers -->
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <label>Organiser(s):</label>
+        <!-- add another organiser button -->
+        <div>
+            <button mat-raised-button class="iconBtn" >
+                <mat-icon>person_add</mat-icon>
+                <label>add another organiser</label>
+            </button>
+        </div>
+    </div>
+    <!-- name -->
+    <mat-form-field>
+        <input matInput placeholder="Name">
+    </mat-form-field>
+    <!-- description -->
+    <mat-form-field>
+        <input matInput placeholder="Description (Organiser's)">
+    </mat-form-field>
+
+    <!-- overview text -->
+    <label>Event Overview:</label>
+    <mat-form-field>
+        <textarea matInput placeholder="A summarized descirption of your event" matTextareaAutosize matAutosizeMinRows="1" matAutosizeMaxRows="5"></textarea>
+    </mat-form-field>
+
+    <!-- dates -->
+    <label>Date and Time:</label>
+    <div fxLayout.gt-md="row" fxLayout.lt-md="column" id="dpContainer">
+        <!-- starts -->
+        <mat-form-field fxFlex.gt-md="50">
+            <input matInput [matDatepicker]="dp1" placeholder="Starts" [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+            <mat-datepicker #dp1></mat-datepicker>
+        </mat-form-field>
+        <!-- ends -->
+        <mat-form-field fxFlex.gt-md="50">
+            <input matInput [matDatepicker]="dp2" placeholder="Ends" [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
+            <mat-datepicker #dp2></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <!-- location -->
+    <label>Location:</label>
+    <mat-form-field>
+        <input matInput placeholder="Where it will be held, if it's online, enter the URL">
+    </mat-form-field>
+
+</div>

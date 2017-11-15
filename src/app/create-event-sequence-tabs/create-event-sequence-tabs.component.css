@@ -1,0 +1,21 @@
+.mat-tab-labels{
+    justify-content: center; /* align items in Main Axis */
+}
+.mat-tab-label{
+    min-width: 0!important;
+}
+h4{
+    padding: 24px;
+    text-align: center;
+    font-weight: normal;
+}
+.infoIcon{
+    font-size: 3em;
+}
+.mat-icon{
+    height: auto!important;
+    width: auto!important;
+}
+.demo-tab-content{
+    margin-top: 1em;
+}

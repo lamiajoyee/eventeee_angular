@@ -1,0 +1,25 @@
+<h2>Addtional Information</h2>
+<div fxLayout="column">
+    <!--event category -->
+    <mat-form-field floatPlaceholder="always">
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+      <mat-placeholder>Event Category</mat-placeholder>
+    </mat-form-field>
+
+    <!-- privacy -->
+
+    <mat-radio-group class="radio-group" floatPlaceholder="always">
+      <mat-radio-button *ngFor="let privacy of Privacies" [value]="privacy">
+        {{ privacy }}
+      </mat-radio-button>
+      <mat-checkbox class="check-box">Can share via social media</mat-checkbox>
+      <mat-checkbox class="check-box">Require A Password</mat-checkbox>
+    </mat-radio-group>
+      
+
+
+</div>
